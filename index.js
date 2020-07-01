@@ -21,10 +21,7 @@ app.post('/sms', jsonParser, (req, res) => {
      from: fromNumber,
      to: toNumber
    })
-  .then((message) => {
-    console.log(message.sid);
-    res.sendStatus(200);
-  })
+  .then(() => res.sendStatus(200))
   .catch(() => res.sendStatus(500));
 });
 
